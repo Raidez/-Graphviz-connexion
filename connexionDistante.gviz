@@ -1,0 +1,15 @@
+graph Connexion{
+	graph [];
+	edge [color=red];
+	node [color=blue];
+	
+	w [label=Web, shape=cloud];
+	s [label=Switch, shape=triangle];
+	p [label=<PostgreSQL<br/>-apache:80<br/>-SGBD PostgreSQL:5432<br/>-phpp>];
+	m [label=<MySQL<br/>-SGBD MySQL:3306<br/>-apache:80<br/>-phpMyAdmin>];
+	w3 [label=<WWW<br/>-apache:80<br/>-serveur SSH:22>];
+	w -- s [label=<80.82.238.198<br/>(bts.bts-malraux72.net)>];
+	s -- w3 [label="172.16.99.1"];
+	s -- p [label="172.16.99.2"];
+	s -- m [label="172.16.99.3"];
+}
